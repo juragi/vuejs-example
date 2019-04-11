@@ -46,7 +46,8 @@
       }
     });
     $(document).ready(function(){
-      $.getJSON("https://poloniex.com/public?command=returnChartData&currencyPair=BTC_ETH&start=1553612400&end=1554432222&period=1800", function(data){
+      var apiUrl = "https://poloniex.com/public?command=returnChartData&currencyPair=BTC_ETH&start=1553612400&end=1554432222&period=1800";
+      $.getJSON(apiUrl, function(data){
         tableApp.list = data;
       });
     });
